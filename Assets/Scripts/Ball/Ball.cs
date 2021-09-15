@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
-        currentDirection = new Vector3(Random(), Random(), 0).normalized;
+        currentDirection = new Vector3(Random(), 1.0f, 0).normalized;
     }
 
     private void FixedUpdate()
@@ -23,7 +23,15 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         currentDirection = Vector2.Reflect(currentDirection, collision.contacts[0].normal);
+
+        // if collides with piece, destroy the piece
+        if (collision.gameObject.tag == "Piece")
+        {
+            Destroy(collision.gameObject);
+        };
     }
+
+
 
     private int Random()
     {

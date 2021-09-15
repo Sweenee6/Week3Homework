@@ -19,4 +19,9 @@ public class GameManager : MonoBehaviour
 
     //TODO
     //Using const data defined above "Instantiate" new pieces to fill the view with
+    private void Start()
+    {
+        //for () { };
+    }
+
 }

@@ -103,6 +103,14 @@ MonoBehaviour:
   goldColor: {fileID: 6554549308691787351, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
   greyColor: {fileID: -9036120728189194214, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
   brownColor: {fileID: -4867482334217583439, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  Colors:
+  - {fileID: 2707577370330349663, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: -8192782701800089896, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: -57110965404973480, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: -286672570409578572, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: 6554549308691787351, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: -9036120728189194214, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
+  - {fileID: -4867482334217583439, guid: 8a1dc6f85b9a244479ac11b4b0b0897c, type: 3}
   spriteRenderer: {fileID: 499284100989736725}
 --- !u!61 &290634886895746792
 BoxCollider2D:

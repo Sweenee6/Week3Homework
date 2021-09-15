@@ -2,7 +2,8 @@
 
 public class Paddle : MonoBehaviour
 {
-    [SerializeField] private float speed = 1.0f;
+    [SerializeField]
+    private float speed = 1.0f;
 
     //TODO
     // Move paddle left and right using keyboard keys, mapping is up to you
