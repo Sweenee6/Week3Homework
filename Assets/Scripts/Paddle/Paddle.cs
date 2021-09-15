@@ -27,7 +27,4 @@ public class Paddle : MonoBehaviour
 
 
     }//end of update
-
-    // Paddle should be able to launch the ball upon space bar being pressed
-    // A launched ball will then bounce around, changing its direction upon any collision
 }

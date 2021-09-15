@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
-        currentDirection = new Vector3(Random(), 1.0f, 0).normalized;
+        currentDirection = new Vector3(0, 1.0f, 0).normalized;
     }
 
     private void FixedUpdate()

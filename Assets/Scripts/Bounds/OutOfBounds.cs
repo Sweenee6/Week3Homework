@@ -16,6 +16,7 @@ public class OutOfBounds : MonoBehaviour
             // destroy the ball
             Destroy(collision.gameObject);
 
+            // show launcher sprite
             ballLauncher.GetComponent<SpriteRenderer>().enabled = true;
         }
 

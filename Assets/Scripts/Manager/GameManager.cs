@@ -23,9 +23,16 @@ public class GameManager : MonoBehaviour
 
     //TODO
     //Using const data defined above "Instantiate" new pieces to fill the view with
+
     private void Start()
     {
-        //for () { };
+        for (int y=0; y<TOTAL_ROWS; ++y)
+        {
+            for (int x = 0; x < PIECE_COUNT_PER_ROW; ++x)
+            {
+                Instantiate(piecePrefab, new Vector3(pieces.position.x + (x * PIECE_LENGTH), pieces.position.y - (y * ROW_HEIGHT), 0.0f), Quaternion.identity);
+            }
+        }
     }
 
     private void Update()
@@ -34,7 +41,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && ballLauncher.GetComponent<SpriteRenderer>().enabled == true)
         {
             // spawn ball at Lancher position
-            Instantiate(ball, new Vector3(ballLauncher.transform.position.x, ballLauncher.transform.position.y, 0f), Quaternion.identity);
+            Instantiate(ball, new Vector3(ballLauncher.transform.position.x, ballLauncher.transform.position.y + 0.5f, 0f), Quaternion.identity);
 
             // Hide the launcher sprite
             ballLauncher.GetComponent<SpriteRenderer>().enabled = false;
