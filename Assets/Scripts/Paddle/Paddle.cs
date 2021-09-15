@@ -25,6 +25,7 @@ public class Paddle : MonoBehaviour
         var xPosition = Mathf.Clamp(transform.position.x, -5.31f, 5.31f);
         transform.position = new Vector3(xPosition, transform.position.y, transform.position.z);
 
+
     }//end of update
 
     // Paddle should be able to launch the ball upon space bar being pressed

@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private EdgeCollider2D border;
 
+    [SerializeField]
+    private GameObject ballLauncher = null;
+    [SerializeField]
+    private GameObject ball = null;
 
     //TODO
     //Using const data defined above "Instantiate" new pieces to fill the view with
@@ -23,5 +27,18 @@ public class GameManager : MonoBehaviour
     {
         //for () { };
     }
+
+    private void Update()
+    {
+        //Launch the ball from the launched with space
+        if (Input.GetKeyDown(KeyCode.Space) && ballLauncher.GetComponent<SpriteRenderer>().enabled == true)
+        {
+            // spawn ball at Lancher position
+            Instantiate(ball, new Vector3(ballLauncher.transform.position.x, ballLauncher.transform.position.y, 0f), Quaternion.identity);
+
+            // Hide the launcher sprite
+            ballLauncher.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }// end update
 
 }

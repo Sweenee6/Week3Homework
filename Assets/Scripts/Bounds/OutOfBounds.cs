@@ -2,6 +2,9 @@
 
 public class OutOfBounds : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject ballLauncher = null;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //TODO: Implement functionality to reset the game somehow.
@@ -12,6 +15,8 @@ public class OutOfBounds : MonoBehaviour
         {
             // destroy the ball
             Destroy(collision.gameObject);
+
+            ballLauncher.GetComponent<SpriteRenderer>().enabled = true;
         }
 
     }
